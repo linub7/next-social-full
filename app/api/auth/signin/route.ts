@@ -44,8 +44,6 @@ export const POST = async (request: Request) => {
     .setExpirationTime('2w')
     .sign(new TextEncoder().encode(process.env.JWT_SECRET));
 
-  console.log({ token });
-
   const response = NextResponse.json({
     status: 'success',
     msg: 'signed in successfully',
