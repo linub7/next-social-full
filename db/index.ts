@@ -1,10 +1,10 @@
-import { Client } from 'pg';
+import { Client, QueryResult } from 'pg';
 import { loadEnvConfig } from '@next/env';
 
 const projectDir = process.cwd();
 loadEnvConfig(projectDir);
 
-export const getClient = async () => {
+export const getClient = async (): Promise<Client> => {
   const client = new Client({
     user: process.env.POSTGRES_USER,
     host: process.env.POSTGRES_HOST,
@@ -14,4 +14,17 @@ export const getClient = async () => {
   });
 
   return client;
+};
+
+export const sql = async (
+  sql: string,
+  values?: Array<any>
+): Promise<QueryResult<any>> => {
+  const client = await getClient();
+  await client.connect();
+
+  const res = await client.query(sql, values);
+
+  await client.end();
+  return res;
 };
