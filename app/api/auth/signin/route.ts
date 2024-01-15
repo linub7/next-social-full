@@ -30,7 +30,7 @@ export const POST = async (request: Request) => {
   );
   // ilike -> case insensitive
   if (res.rowCount === 0) {
-    return NextResponse.json({ error: 'Invalid credentials' }, { status: 404 });
+    return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
   }
   const user = res.rows[0];
   const match = await bcrypt.compare(json?.password, user?.password);
