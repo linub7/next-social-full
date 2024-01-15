@@ -42,7 +42,7 @@ export const POST = async (request: Request) => {
     .setSubject(user?.id)
     .setIssuedAt()
     .setExpirationTime('2w')
-    .sign(new TextEncoder().encode(process.env.JWT_SECRET));
+    .sign(new TextEncoder().encode(process.env.JWT_SECRET!));
 
   const response = NextResponse.json({
     status: 'success',

@@ -1,11 +1,11 @@
 interface Props {}
 
-const PageFeed = (props: Props) => {
+const FeedPage = (props: Props) => {
   return (
     <main>
-      <h1>PageFeed</h1>
+      <h1>FeedPage</h1>
     </main>
   );
 };
 
-export default PageFeed;
+export default FeedPage;
