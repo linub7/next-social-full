@@ -7,6 +7,7 @@ import CommonAuthButton from '@/components/common/buttons/auth';
 import CommonAuthInput from '@/components/common/inputs/auth';
 import AuthFormHeaderComponent from '@/components/common/auth/form/header';
 import AuthFormComponent from '@/components/common/auth/form';
+import AuthLinkComponent from '@/components/common/auth/link';
 
 interface Props {}
 
@@ -62,6 +63,7 @@ const SigninFromComponent = (props: Props) => {
         />
       </div>
       <CommonAuthButton btnTitle="Signin" />
+      <AuthLinkComponent href="/signup" label="Don't have an account?" />
     </AuthFormComponent>
   );
 };
