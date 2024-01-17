@@ -1,7 +1,7 @@
+import { NextResponse } from 'next/server';
+
 import { getJWTPayload } from '@/app/utils/auth';
 import { sql } from '@/db';
-import { NextResponse } from 'next/server';
-import { QueryResult } from 'pg';
 
 export const GET = async (request: Request) => {
   const jwtPayload = await getJWTPayload();

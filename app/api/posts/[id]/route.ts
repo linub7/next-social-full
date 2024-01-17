@@ -1,6 +1,6 @@
+import { NextResponse } from 'next/server';
 import { getJWTPayload } from '@/app/utils/auth';
 import { sql } from '@/db';
-import { NextResponse } from 'next/server';
 
 export const GET = async (
   request: Request,
