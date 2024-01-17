@@ -1,9 +1,11 @@
+import FeedPageContainer from '@/components/private/feed/container';
+
 interface Props {}
 
 const FeedPage = (props: Props) => {
   return (
     <main>
-      <h1>FeedPage</h1>
+      <FeedPageContainer />
     </main>
   );
 };
