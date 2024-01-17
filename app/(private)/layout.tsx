@@ -14,10 +14,12 @@ interface Props {
 const PrivateLayout = (props: Props) => {
   return (
     <SWRConfig value={{ fetcher }}>
-      <div>
+      <div className="flex flex-col min-h-screen max-w-md m-auto items-center justify-center">
         <PrivatePagesHeader />
         <PrivatePagesNavbar />
-        <main>{props.children}</main>
+        <main className="w-full p-5 bg-slate-800 rounded-lg my-2">
+          {props.children}
+        </main>
         <PrivatePagesFooter />
       </div>
     </SWRConfig>
