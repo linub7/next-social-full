@@ -1,11 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { IUser } from '@/types/user';
-import Image from 'next/image';
 
 interface Props {
   user: IUser;
-  href: string;
+  href?: string;
 }
 
 const UserProfile = (props: Props) => {

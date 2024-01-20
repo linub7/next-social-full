@@ -1,9 +1,13 @@
+'use client';
+
+import FollowersPageContainer from '@/components/private/followers/container';
+
 interface Props {}
 
 const FollowersPage = (props: Props) => {
   return (
     <main>
-      <h1>FollowersPage</h1>
+      <FollowersPageContainer />
     </main>
   );
 };
