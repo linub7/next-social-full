@@ -20,7 +20,7 @@ const PrivatePagesHeader = (props: Props) => {
         <h1 className="font-mono text-lg">Social_App</h1>
       </div>
       <div>
-        <UserProfile user={data?.data} href={'/account'} />
+        <UserProfile user={data?.data} href={'account'} />
       </div>
     </header>
   );
