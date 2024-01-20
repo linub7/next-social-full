@@ -12,6 +12,7 @@ export const middleware = async (request: NextRequest) => {
     pathname.startsWith('/api/auth/signout'),
     pathname.startsWith('/api/users'),
     pathname.startsWith('/api/posts'),
+    pathname.startsWith('/api/follows'),
   ];
 
   if (authenticatedAPIRoutes.includes(true)) {
