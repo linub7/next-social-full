@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+
 import FeedPageList from '../list';
+import LoadMoreButton from '@/components/common/buttons/load-more';
 
 interface Props {}
 
@@ -18,12 +20,7 @@ const FeedPageContainer = (props: Props) => {
     <div>
       {pages}
       <div className="flex justify-center">
-        <button
-          className="bg-slate-900 p-2 rounded-lg"
-          onClick={() => setCnt((prev) => prev + 1)}
-        >
-          Load more
-        </button>
+        <LoadMoreButton onClick={() => setCnt((prev) => prev + 1)} />
       </div>
     </div>
   );

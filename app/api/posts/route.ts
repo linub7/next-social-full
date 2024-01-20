@@ -26,3 +26,22 @@ export const GET = async (request: Request) => {
 
   return NextResponse.json({ data: res.rows });
 };
+
+export const POST = async (request: Request) => {
+  const body = await request.json();
+  if (!body?.content || body?.content?.length < 10)
+    return NextResponse.json({
+      error: 'Content is required and must be at least 10 characters',
+    });
+
+  const jwtPayload = await getJWTPayload();
+  const userId = jwtPayload?.sub;
+  const res = await sql(
+    `insert into posts (user_id, content) values ($1, $2) returning *`,
+    [userId, body?.content]
+  );
+  return NextResponse.json(
+    { status: 'success', data: res.rows[0] },
+    { status: 201 }
+  );
+};

@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+
 import { getJWTPayload } from '@/app/utils/auth';
 import { sql } from '@/db';
 

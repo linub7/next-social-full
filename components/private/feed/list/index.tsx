@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 
 import { IPost } from '@/types/post';
-import FeedPageListItem from './item';
+import PostsListItem from '../../../common/posts/list/item';
 
 interface Props {
   index: number;
@@ -19,7 +19,7 @@ const FeedPageList = (props: Props) => {
       <ul>
         {data?.data?.map((post: IPost) => (
           <li key={post?.id} className="my-5">
-            <FeedPageListItem post={post} />
+            <PostsListItem post={post} />
           </li>
         ))}
       </ul>

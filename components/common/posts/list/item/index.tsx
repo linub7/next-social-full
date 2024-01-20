@@ -7,7 +7,7 @@ interface Props {
   post: IPost;
 }
 
-const FeedPageListItem = (props: Props) => {
+const PostsListItem = (props: Props) => {
   const { post } = props;
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
@@ -50,4 +50,4 @@ const FeedPageListItem = (props: Props) => {
   );
 };
 
-export default FeedPageListItem;
+export default PostsListItem;
