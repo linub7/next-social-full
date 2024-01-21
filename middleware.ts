@@ -13,6 +13,7 @@ export const middleware = async (request: NextRequest) => {
     pathname.startsWith('/api/users'),
     pathname.startsWith('/api/posts'),
     pathname.startsWith('/api/follows'),
+    pathname.startsWith('/api/search'),
   ];
 
   if (authenticatedAPIRoutes.includes(true)) {
