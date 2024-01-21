@@ -15,7 +15,10 @@ const ProfilePage = (props: Props) => {
     <main>
       <ProfilePageCreateForm />
       <br />
-      <PostsContainer username={data?.data?.username} />
+      <PostsContainer
+        username={data?.data?.username}
+        isEditButtonVisible={true}
+      />
     </main>
   );
 };

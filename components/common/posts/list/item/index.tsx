@@ -5,10 +5,11 @@ import { IPost } from '@/types/post';
 
 interface Props {
   post: IPost;
+  isEditButtonVisible?: Boolean;
 }
 
 const PostsListItem = (props: Props) => {
-  const { post } = props;
+  const { post, isEditButtonVisible = false } = props;
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
@@ -46,6 +47,16 @@ const PostsListItem = (props: Props) => {
         </div>
         <div>{post?.content}</div>
       </div>
+      {isEditButtonVisible && (
+        <div className="text-right flex-grow">
+          <Link
+            href={`/profile/edit-post/${post?.id}`}
+            className="text-green-400"
+          >
+            Edit
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

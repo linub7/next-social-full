@@ -5,14 +5,21 @@ import LoadMoreButton from '../../buttons/load-more';
 
 interface Props {
   username: string;
+  isEditButtonVisible?: Boolean;
 }
 
 const PostsContainer = (props: Props) => {
+  const { username, isEditButtonVisible = false } = props;
   const [cnt, setCnt] = useState(1);
   const pages = [];
   for (let index = 0; index < cnt; index++) {
     pages.push(
-      <PostsList key={index} index={index} username={props.username} />
+      <PostsList
+        key={index}
+        index={index}
+        username={username}
+        isEditButtonVisible={isEditButtonVisible}
+      />
     );
   }
   return (
