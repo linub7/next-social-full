@@ -11,7 +11,7 @@ const AuthLinkComponent = (props: Props) => {
     <div>
       <Link
         href={href}
-        className="text-white border border-white my-4 p-3 rounded-lg block text-center"
+        className="dark:text-white text-slate-800 border dark:border-white border-slate-800 my-4 p-3 rounded-lg block text-center"
       >
         {label}
       </Link>

@@ -19,7 +19,7 @@ const PrivateLayout = (props: Props) => {
         <SearchBar />
         <PrivatePagesHeader />
         <PrivatePagesNavbar />
-        <main className="w-full p-5 bg-slate-800 rounded-lg my-2">
+        <main className="w-full p-5 dark:bg-slate-800 bg-slate-300 rounded-lg my-2">
           {props.children}
         </main>
         <PrivatePagesFooter />

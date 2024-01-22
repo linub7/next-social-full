@@ -5,7 +5,7 @@ interface Props {
 const LoadMoreButton = (props: Props) => {
   return (
     <button
-      className="bg-slate-900 p-2 rounded-lg my-5"
+      className="dark:bg-slate-900 bg-slate-400 p-2 rounded-lg my-5"
       onClick={props.onClick}
     >
       Load more

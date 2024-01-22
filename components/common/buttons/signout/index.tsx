@@ -13,7 +13,7 @@ const SignoutButton = (props: Props) => {
   return (
     <button
       onClick={handleSignout}
-      className="text-green-400 underline p-2 rounded-lg my-5"
+      className="dark:text-green-400 text-green-800 underline p-2 rounded-lg my-5"
     >
       Signout
     </button>

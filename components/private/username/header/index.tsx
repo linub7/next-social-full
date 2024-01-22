@@ -48,7 +48,7 @@ const UsernamePageHeader = (props: Props) => {
     }
   };
   return (
-    <header className="w-full bg-slate-800 p-2 rounded-lg flex flex-row items-center justify-between">
+    <header className="w-full dark:bg-slate-800 bg-slate-300 p-2 rounded-lg flex flex-row items-center justify-between">
       <h1 className="text-lg font-bold">{username}</h1>
       {followData?.data?.length > 0 ? (
         <FollowButton label="UnFollow" onClick={handleUnFollow} />

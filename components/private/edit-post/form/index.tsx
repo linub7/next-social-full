@@ -27,11 +27,15 @@ const EditPostForm = (props: Props) => {
   return (
     <form onSubmit={handleSubmit}>
       <textarea
-        className="bg-gray-700 p-2 rounded-lg w-full my-2"
+        className="dark:bg-gray-700 dark:text-white bg-white text-black p-2 rounded-lg w-full my-2"
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
-      <button type="submit" className="bg-slate-900 p-2 rounded-lg ">
+      <button
+        bg-slate-300
+        type="submit"
+        className="dark:bg-slate-900 bg-slate-400 p-2 rounded-lg "
+      >
         Update Post
       </button>
     </form>

@@ -38,12 +38,15 @@ const ProfilePageCreateForm = (props: Props) => {
   return (
     <form onSubmit={handleSubmit}>
       <textarea
-        className="bg-gray-700 rounded-lg p-2 w-full my-2"
+        className="dark:bg-gray-700 dark:text-white bg-white text-black rounded-lg p-2 w-full my-2"
         placeholder="What is happening?"
         value={content}
         onChange={handleChangeInput}
       ></textarea>
-      <button className="bg-slate-900 p-2 rounded-lg" type="submit">
+      <button
+        className="dark:bg-slate-900 bg-slate-400 p-2 rounded-lg"
+        type="submit"
+      >
         Post
       </button>
     </form>

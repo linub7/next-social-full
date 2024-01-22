@@ -10,7 +10,7 @@ const AuthFormComponent = (props: Props) => {
   return (
     <form
       onSubmit={onSubmit}
-      className="flex flex-col gap-2 p-5 max-w-xs w-full bg-slate-800 rounded"
+      className="flex flex-col gap-2 p-5 max-w-xs w-full dark:bg-slate-800 bg-slate-300 rounded"
     >
       {children}
     </form>

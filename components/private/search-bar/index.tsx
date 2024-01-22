@@ -51,11 +51,11 @@ const SearchBar = (props: Props) => {
       <input
         type="text"
         onChange={handleChange}
-        className="p-2 rounded-lg bg-gray-700 my-2 max-w-xs"
+        className="p-2 rounded-lg dark:bg-gray-700 dark:text-white bg-white text-black my-2 max-w-xs"
         placeholder="Search users"
       />
       {searchResults?.length > 0 && (
-        <ul className="flex flex-col gap-2 bg-gray-700 absolute p-2 rounded-lg top-14 w-full max-w-sm ring-2">
+        <ul className="flex flex-col gap-2 dark:bg-gray-700 dark:text-white bg-white text-black absolute p-2 rounded-lg top-14 w-full max-w-sm ring-2">
           {searchResults?.map((result: IUser) => (
             <li
               key={result?.id}

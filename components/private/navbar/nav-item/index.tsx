@@ -10,7 +10,10 @@ const PrivatePagesNavbarItem = (props: Props) => {
   const { href, label, isActive = false } = props;
   return (
     <li>
-      <Link href={href} className={isActive ? 'text-green-400' : ''}>
+      <Link
+        href={href}
+        className={isActive ? 'dark:text-green-400 text-green-800' : ''}
+      >
         {label}
       </Link>
     </li>

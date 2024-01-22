@@ -11,7 +11,7 @@ const HomePageLink = (props: Props) => {
     <div>
       <Link
         href={href}
-        className="bg-slate-900 my-4 p-3 rounded-lg block text-center"
+        className="dark:bg-slate-900 bg-slate-400 my-4 p-3 rounded-lg block text-center"
       >
         {label}
       </Link>
